@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài Tập 8 - Heroes of JavaScript and HTML</title>
+    <style>
+        /* i. Khung chứa lớn: 960px, margin, font-size, background, padding */
+        .container {
+            width: 960px;
+            margin: 20px auto;
+            font-size: 16px;
+            background: #d9d9d9;
+            padding: 25px;
+            font-family: "Times New Roman", Times, serif;
+            box-sizing: border-box;
+        }
+        /* ii. Header: font-size, canh lề */
+        header h1 {
+            font-size: 32px;
+            text-align: center;
+            margin-top: 0;
+        }
+        /* iii. Description: margin, background, padding, border */
+        .main-desc {
+            margin: 20px 0;
+            background: #8c8c8c;
+            padding: 20px 40px;
+            border: 2px solid #ffffff;
+            border-radius: 15px;
+            text-align: center;
+        }
+        .sub-title {
+            text-align: center;
+            margin: 25px 0 15px;
+        }
+        .heroes-list {
+            display: flex;
+            justify-content: space-between;
+        }
+        /* iv. Hero-item: width, display */
+        .hero-item {
+            width: 220px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        /* v. H2 trong Hero-item: font-size, canh lề */
+        .hero-item h2 {
+            font-size: 18px;
+            text-align: center;
+        }
+        /* vi. Description trong Hero-item: position, margin, font-size, background, height, canh lề, padding, border, z-index */
+        .hero-item .desc {
+            position: relative;
+            margin: 0;
+            font-size: 16px;
+            background: rgba(115, 115, 115, 0.85);
+            height: 210px;
+            text-align: justify;
+            padding: 15px;
+            border: 2px solid #ffffff;
+            z-index: 2;
+            box-sizing: border-box;
+        }
+        /* vii. Hình trong Hero-item: position, cao, rộng, border */
+        .hero-item img {
+            position: relative;
+            top: -35px;
+            width: 190px;
+            height: 150px;
+            border: 2px solid #aaa;
+            border-radius: 20px;
+            z-index: 1;
+            display: block;
+            margin: 0 auto;
+            background: #fff;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Heroes of JavaScript and HTML</h1>
+        </header>
+        <div class="main-desc">
+            <strong>Heroes of JavaScript and HTML</strong> is a "Heroes of Might and Magic"-like game, but for code nerds.<br>
+            Each hero has its unique coding abilities and based on them he can develop software applications.
+        </div>
+        <p class="sub-title">Currently the game has only four hero types:</p>
+        <div class="heroes-list">
+            <div class="hero-item">
+                <h2>Front-end Developer</h2>
+                <p class="desc">Being the ultra masters of JavaScript, the order of the <strong>Front-enders</strong> is known to create user interfaces, that fill the users with absolute pleasure.</p>
+                <img src="https://cdn-icons-png.flaticon.com/512/1055/1055666.png" alt="Front-end">
+            </div>
+            <div class="hero-item">
+                <h2>Mobile Developer</h2>
+                <p class="desc">The movement of the <strong>Mobile developers</strong> is brand new, yet in their short time they already manage to amaze the peoples of the worlds and beyond with create applications.</p>
+                <img src="https://cdn-icons-png.flaticon.com/512/2586/2586488.png" alt="Mobile">
+            </div>
+            <div class="hero-item">
+                <h2>Web Developer</h2>
+                <p class="desc">The sect of the <strong>Web developers</strong> is the oldest there is. They prefer the old ways and rarely move to modern stuff. The Old Religion gives them power of small gods.</p>
+                <img src="https://cdn-icons-png.flaticon.com/512/1995/1995515.png" alt="Web">
+            </div>
+            <div class="hero-item">
+                <h2>QA Engineer</h2>
+                <p class="desc">The <strong>QAs</strong> are the desiders of fates! They always have the final word, and all gods and mortals are bound to obey them.</p>
+                <img src="https://cdn-icons-png.flaticon.com/512/4305/4305432.png" alt="QA">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,245 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chúc mừng ngày Phụ nữ Việt Nam 20/10</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      overflow: hidden;
+      color: #512c43;
+      font-family: Georgia, "Times New Roman", serif;
+      background: #fff6f6;
+    }
+    .content {
+      position: relative;
+      z-index: 2;
+      width: 90%;
+      max-width: 790px;
+      min-height: 100vh;
+      margin: 0 auto;
+      padding: 30px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .logos { display: flex; gap: 10px; margin-bottom: 28px; }
+    .logo {
+      min-width: 108px;
+      padding: 8px 10px;
+      border: 1px solid #efdce3;
+      border-radius: 12px;
+      background: #fff;
+      color: #8a334d;
+      box-shadow: 0 4px 12px rgba(120, 48, 75, 0.08);
+      font: bold 16px Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+    }
+    .logo svg { width: 28px; height: 28px; }
+    .logo small { display: block; margin-top: 3px; color: #997887; font-size: 7px; }
+    .logo:nth-child(2) { color: #286879; }
+    .logo:nth-child(3) { color: #a6385d; }
+    .eyebrow {
+      margin: 0 0 14px;
+      color: #bd718b;
+      font: bold 11px Arial, sans-serif;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+    h1 {
+      margin: 0;
+      color: #7d294f;
+      font-size: 58px;
+      font-weight: normal;
+      line-height: 1.05;
+    }
+    h1 em { color: #d94d79; }
+    .date {
+      margin: 17px 0 0;
+      color: #bf7186;
+      font: bold 16px Arial, sans-serif;
+      letter-spacing: 5px;
+    }
+    .divider { margin: 24px 0 18px; color: #dc8ca4; font-size: 22px; }
+    .message {
+      max-width: 510px;
+      margin: 0;
+      color: #805a6d;
+      font-size: 19px;
+      line-height: 1.6;
+    }
+    .hint { margin-top: 25px; color: #b27c8d; font: 12px Arial, sans-serif; }
+    .hint strong { color: #d55c7d; }
+    .falling {
+      position: fixed;
+      top: -70px;
+      z-index: 3;
+      cursor: pointer;
+      animation-name: fall, sway;
+      animation-duration: 10s, 3s;
+      animation-timing-function: linear, ease-in-out;
+      animation-iteration-count: 1, infinite;
+      animation-direction: normal, alternate;
+    }
+    .balloon {
+      width: 34px;
+      height: 44px;
+      border-radius: 50%;
+      opacity: 0.82;
+    }
+    .balloon:before {
+      position: absolute;
+      bottom: -5px;
+      left: 14px;
+      border-right: 3px solid transparent;
+      border-left: 3px solid transparent;
+      border-top: 6px solid currentColor;
+      content: "";
+    }
+    .balloon:after {
+      position: absolute;
+      top: 48px;
+      left: 17px;
+      width: 1px;
+      height: 42px;
+      background: #c48ca0;
+      content: "";
+    }
+    .heart { color: #e87591; font: 34px Arial, sans-serif; }
+    @keyframes fall { to { top: 110vh; } }
+    @keyframes sway { from { margin-left: -12px; } to { margin-left: 12px; } }
+    .wish {
+      position: fixed;
+      z-index: 5;
+      width: 280px;
+      margin-left: -140px;
+      padding: 10px 14px;
+      border: 1px solid #f1cbd7;
+      border-radius: 16px;
+      background: #fff;
+      color: #a83358;
+      text-align: center;
+      font: bold 14px/1.4 Arial, sans-serif;
+      animation: show-wish 2.2s ease-out forwards;
+      pointer-events: none;
+    }
+    @keyframes show-wish {
+      0% { opacity: 0; margin-top: 0; }
+      15%, 75% { opacity: 1; margin-top: -35px; }
+      100% { opacity: 0; margin-top: -65px; }
+    }
+    .spark {
+      position: fixed;
+      z-index: 4;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      animation: sparkle 650ms ease-out forwards;
+      pointer-events: none;
+    }
+    @keyframes sparkle { to { opacity: 0; transform: translate(var(--x), var(--y)) scale(0.2); } }
+    @media (max-width: 520px) {
+      .content { width: 94%; padding: 20px 0; }
+      .logos { gap: 5px; margin-bottom: 23px; }
+      .logo { min-width: 0; padding: 7px; font-size: 13px; }
+      .logo svg { width: 23px; height: 23px; }
+      .logo small { font-size: 6px; }
+      h1 { font-size: 38px; }
+      .message { font-size: 17px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="content">
+    <div class="logos" aria-label="Logo UEH, CTD và BIT">
+      <div class="logo" title="UEH University">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="#c78b3b"/><text x="20" y="25" text-anchor="middle" fill="white" font-size="12" font-weight="bold">UEH</text></svg>
+        <div>UEH<small>UNIVERSITY</small></div>
+      </div>
+      <div class="logo" title="College of Technology and Design">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><rect x="3" y="3" width="34" height="34" rx="9" fill="#438c8e"/><text x="20" y="25" text-anchor="middle" fill="white" font-size="13" font-weight="bold">CTD</text></svg>
+        <div>CTD<small>TECH &amp; DESIGN</small></div>
+      </div>
+      <div class="logo" title="Business Information Technology">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 2 38 12v16L20 38 2 28V12z" fill="#bf4f76"/><text x="20" y="25" text-anchor="middle" fill="white" font-size="14" font-weight="bold">BIT</text></svg>
+        <div>BIT<small>BUSINESS IT</small></div>
+      </div>
+    </div>
+    <p class="eyebrow">Gửi những đóa hoa tuyệt vời</p>
+    <h1>Chúc mừng<br><em>ngày Phụ nữ Việt Nam</em></h1>
+    <p class="date">20 · 10</p>
+    <div class="divider" aria-hidden="true">♡</div>
+    <p class="message">Chúc một nửa thế giới luôn rạng rỡ, hạnh phúc và được yêu thương thật nhiều. Mong mỗi ngày của bạn đều dịu dàng như một đóa hoa đang nở.</p>
+    <p class="hint">Chạm vào <strong>bong bóng</strong> hoặc <strong>trái tim</strong> để nhận lời chúc nhé ✨</p>
+  </main>
+  <script>
+    var wishes = [
+      'Chúc bạn luôn xinh đẹp và tỏa sáng! ✨',
+      'Mong niềm vui luôn ở bên bạn 💗',
+      'Chúc bạn hạnh phúc hôm nay và mỗi ngày 🌷',
+      'Bạn xứng đáng với những điều tuyệt vời nhất! 💐',
+      'Chúc mọi ước mơ dịu dàng đều thành hiện thực 🌟',
+      'Luôn yêu thương và tự hào về chính mình nhé! 💕',
+      'Chúc bạn một ngày 20/10 ngập tràn tiếng cười 🌸',
+      'Cảm ơn bạn vì đã làm thế giới đẹp hơn 💖'
+    ];
+    var colors = ['#f38ba8', '#e9a1b6', '#f4bd78', '#ad9bd1', '#86c7c2', '#f28f71'];
+
+    function popItem(item, event) {
+      var x = event.clientX || (item.getBoundingClientRect().left + 15);
+      var y = event.clientY || (item.getBoundingClientRect().top + 15);
+      var wish = document.createElement('div');
+      wish.className = 'wish';
+      wish.innerHTML = wishes[Math.floor(Math.random() * wishes.length)];
+      wish.style.left = x + 'px';
+      wish.style.top = y + 'px';
+      document.body.appendChild(wish);
+      window.setTimeout(function () { if (wish.parentNode) wish.parentNode.removeChild(wish); }, 2300);
+
+      for (var i = 0; i < 9; i++) {
+        var spark = document.createElement('i');
+        spark.className = 'spark';
+        spark.style.left = x + 'px';
+        spark.style.top = y + 'px';
+        spark.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+        spark.style.setProperty('--x', (Math.random() * 100 - 50) + 'px');
+        spark.style.setProperty('--y', (Math.random() * 100 - 50) + 'px');
+        document.body.appendChild(spark);
+        window.setTimeout(function (node) { return function () { if (node.parentNode) node.parentNode.removeChild(node); }; }(spark), 700);
+      }
+      if (item.parentNode) item.parentNode.removeChild(item);
+    }
+
+    function makeFaller() {
+      var item = document.createElement('div');
+      var isBalloon = Math.random() > 0.48;
+      item.className = 'falling ' + (isBalloon ? 'balloon' : 'heart');
+      if (isBalloon) {
+        var color = colors[Math.floor(Math.random() * colors.length)];
+        item.style.backgroundColor = color;
+        item.style.color = color;
+      } else {
+        item.innerHTML = '♥';
+      }
+      item.style.left = (Math.random() * 96) + 'vw';
+      item.style.animationDuration = (8 + Math.random() * 8) + 's, ' + (2 + Math.random() * 2) + 's';
+      item.onclick = function (event) { popItem(item, event || window.event); };
+      document.body.appendChild(item);
+      window.setTimeout(function () { if (item.parentNode) item.parentNode.removeChild(item); }, 17000);
+    }
+
+    for (var count = 0; count < 12; count++) {
+      window.setTimeout(makeFaller, count * 350);
+    }
+    window.setInterval(makeFaller, 700);
+  </script>
+</body>
+</html>

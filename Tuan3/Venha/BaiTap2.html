@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài Tập 2 - Định dạng đoạn văn & Background</title>
+    <style>
+        /* Câu 2d: Logo BIT 30px, lặp lại và cố định */
+        body {
+            background-color: #f4f6f9;
+            background-image: url("https://bit.ueh.edu.vn/wp-content/uploads/2017/06/BIT_logo.png");
+            background-size: 30px;
+            background-repeat: repeat;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        /* Câu 2a: Đại học UEH: chữ xanh, canh giữa, in đậm, gạch chân, 30px */
+        #university {
+            color: blue;
+            text-align: center;
+            font-weight: bold;
+            text-decoration: underline;
+            font-size: 30px;
+            background-color: rgba(255, 255, 255, 0.85);
+            padding: 10px;
+        }
+
+        /* Câu 2b: Khoa CNTTKD: chữ đỏ, canh phải, in nghiêng, viền chấm vàng bo góc, nền xám, 15px, chữ mờ 50% */
+        #faculty {
+            color: red;
+            text-align: right;
+            font-style: italic;
+            border: 3px dotted yellow;
+            border-radius: 12px;
+            background-color: gray;
+            font-size: 15px;
+            opacity: 0.5;
+            padding: 10px;
+        }
+
+        /* Câu 2c: Chữ BIT-UEH đổ bóng nghệ thuật */
+        #demotext {
+            display: inline-block;
+            font-size: 28px;
+            font-weight: bold;
+            padding: 10px 20px;
+            margin: 15px 0;
+            color: #A7DD3C;
+            background: #FFFFFF;
+            text-shadow: 2px 0 0px #800040, 3px 2px 0px rgba(77,0,38,0.5), 3px 0 3px #FF002B, 
+                         5px 0 3px #800015, 6px 2px 3px rgba(77,0,13,0.5), 6px 0 9px #FF5500, 
+                         8px 0 9px #802A00, 9px 2px 9px rgba(77,25,0,0.5), 9px 0 18px #FFD500, 
+                         11px 0 18px #806A00, 12px 2px 18px rgba(77,66,0,0.5), 12px 0 30px #D4FF00, 
+                         14px 0 30px #6A8000, 15px 2px 30px rgba(64,77,0,0.5), 15px 0 45px #80FF00, 
+                         17px 0 45px #408000, 17px 2px 45px rgba(38,77,0,0.5);
+        }
+
+        /* Câu 2e: Rộng 100px, Cao 50px, Ẩn nội dung tràn, Cắt với dấu ..., white-space: nowrap */
+        #overflow-text {
+            width: 100px;
+            height: 50px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            background-color: white;
+            border: 1px solid #333;
+            padding: 10px;
+            line-height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <p id="university">Đại học UEH</p>
+    <p id="faculty">Khoa CNTTKD</p>
+    <div>
+        <span id="demotext">BIT-UEH</span>
+    </div>
+    <p id="overflow-text">
+        Nhu cầu xã hội Ngành Thương mại điện tử (TMĐT) tại Việt Nam hiện nay đang có những bước tăng trưởng mạnh mẽ và ngày càng đóng góp nhiều hơn cho sự phát triển kinh tế xã hội của đất nước. Thị trường TMĐT Việt Nam đã trở nên sôi động hơn khi có nhiều
+    </p>
+</body>
+</html>

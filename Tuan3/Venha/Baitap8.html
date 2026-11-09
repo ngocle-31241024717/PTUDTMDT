@@ -2,113 +2,288 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Bài Tập 8 - Heroes of JavaScript and HTML</title>
+    <title>Bài tập 8 (Câu 8a & 8b) - Heroes & Bat Family</title>
     <style>
-        /* i. Khung chứa lớn: 960px, margin, font-size, background, padding */
-        .container {
+        body {
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 30px 0;
+        }
+        .section-separator {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin: 50px 0 20px;
+            color: #005f69;
+        }
+
+        /* =========================================================
+           PHẦN 8A: HEROES OF JAVASCRIPT AND HTML (Đúng 7 gợi ý của đề)
+           ========================================================= */
+        /* i. Khung chứa lớn: kích thước: 960px; margin; font-size; background; padding */
+        .heroes-wrapper {
             width: 960px;
-            margin: 20px auto;
-            font-size: 16px;
-            background: #d9d9d9;
-            padding: 25px;
-            font-family: "Times New Roman", Times, serif;
+            margin: 0 auto;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 14px;
+            background-color: #d3d3d3;
+            padding: 25px 20px 40px;
             box-sizing: border-box;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
         }
-        /* ii. Header: font-size, canh lề */
-        header h1 {
-            font-size: 32px;
+        /* ii. Header: font-size; canh lề */
+        .heroes-wrapper header h1 {
+            font-size: 28px;
             text-align: center;
-            margin-top: 0;
+            margin: 0 0 20px 0;
+            color: #111;
         }
-        /* iii. Description: margin, background, padding, border */
-        .main-desc {
-            margin: 20px 0;
-            background: #8c8c8c;
-            padding: 20px 40px;
+        /* iii. Description: margin; background; padding; border */
+        .heroes-wrapper .main-description {
+            margin: 0 10px 20px;
+            background-color: #8c8c8c;
+            padding: 18px 25px;
             border: 2px solid #ffffff;
-            border-radius: 15px;
-            text-align: center;
+            border-radius: 14px;
+            color: #111;
+            line-height: 1.4;
         }
-        .sub-title {
+        .heroes-wrapper .sub-title {
             text-align: center;
-            margin: 25px 0 15px;
+            font-style: italic;
+            margin-bottom: 20px;
+            font-size: 14px;
         }
         .heroes-list {
-            display: flex;
-            justify-content: space-between;
+            text-align: center;
+            font-size: 0; /* Khử khoảng trắng giữa các khối inline-block */
         }
-        /* iv. Hero-item: width, display */
+        /* iv. Hero-item: width; display */
         .hero-item {
             width: 220px;
             display: inline-block;
             vertical-align: top;
+            margin: 0 7px;
+            font-size: 14px;
         }
-        /* v. H2 trong Hero-item: font-size, canh lề */
+        /* v. H2 trong Hero-item: font-size; canh lề */
         .hero-item h2 {
-            font-size: 18px;
+            font-size: 15px;
             text-align: center;
+            margin: 0 0 12px 0;
+            color: #111;
         }
-        /* vi. Description trong Hero-item: position, margin, font-size, background, height, canh lề, padding, border, z-index */
-        .hero-item .desc {
+        /* vi. Description trong Hero-item: position; margin; font-size; background; height; canh lề; padding; border; z-index */
+        .hero-item .hero-desc {
             position: relative;
             margin: 0;
-            font-size: 16px;
-            background: rgba(115, 115, 115, 0.85);
-            height: 210px;
+            font-size: 13px;
+            background-color: rgba(120, 120, 120, 0.88);
+            height: 185px;
             text-align: justify;
-            padding: 15px;
+            padding: 12px;
             border: 2px solid #ffffff;
-            z-index: 2;
+            z-index: 2; /* Nằm đè lên trên tấm ảnh bên dưới */
+            color: #111;
             box-sizing: border-box;
+            line-height: 1.3;
         }
-        /* vii. Hình trong Hero-item: position, cao, rộng, border */
+        /* vii. Hình trong Hero-item: position; cao; rộng; border */
         .hero-item img {
             position: relative;
-            top: -35px;
-            width: 190px;
-            height: 150px;
-            border: 2px solid #aaa;
-            border-radius: 20px;
+            top: -35px; /* Kéo ảnh dịch lên để nằm lồng xuống dưới khung chữ như đề bài */
             z-index: 1;
-            display: block;
-            margin: 0 auto;
-            background: #fff;
+            width: 190px;
+            height: 145px;
             object-fit: cover;
+            border: 2px solid #888;
+            border-radius: 22px;
+            background-color: #fff;
+        }
+
+        /* =========================================================
+           PHẦN 8B: THE BAT FAMILY (Đúng 6 gợi ý của đề + Hiệu ứng Hover)
+           ========================================================= */
+        /* i. Khung chứa lớn: kích thước: 1024px; margin; canh lề */
+        .bat-wrapper {
+            width: 1024px;
+            margin: 0 auto;
+            text-align: center;
+            background-color: #ffffff;
+            padding-bottom: 40px;
+            font-family: Georgia, serif;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+        /* ii. site-header: canh lề; margin; background: màu, hình; màu; text-shadow */
+        .site-header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 25px 0;
+            /* LƯU Ý THAY ẢNH LOGO BATMAN NỀN HEADER (Nếu muốn) */
+            background: #555555 url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/DC_Comics_logo.png/240px-DC_Comics_logo.png') no-repeat 20px center;
+            background-size: 55px;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px #000000;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .superheroes {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        /* iii. li trong superheroes: width; display; position */
+        .superheroes li {
+            width: 175px;
+            display: inline-block;
+            position: relative;
+            margin: 0 5px;
+            vertical-align: top;
+            transition: width 0.35s ease;
+        }
+        /* iv. Hình trong superheroes: border; max-width */
+        .superheroes li img {
+            max-width: 100%;
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border: 2px solid #333;
+            border-radius: 16px;
+            display: block;
+        }
+        .superheroes li strong {
+            position: absolute;
+            top: 10px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            color: #ffffff;
+            text-shadow: 1px 1px 4px #000;
+            font-size: 16px;
+            padding: 4px 0;
+            background: rgba(0, 0, 0, 0.45);
+            border-top-left-radius: 14px;
+            border-top-right-radius: 14px;
+        }
+        /* v. Thẻ a trong superheroes: display; width; color; text-decoration */
+        .superheroes li a {
+            display: none; /* Mặc định ẩn chữ Read more, chỉ hiện khi hover */
+            width: 100%;
+            color: #ffffff;
+            background-color: #666666;
+            text-decoration: none;
+            padding: 8px 0;
+            margin-top: 6px;
+            border-radius: 6px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+        }
+        /* vi. Hover: 
+           1. Làm Read more: hiển thị; hiển thị underline
+           2. Làm cho li trong superheroes: tăng chiều rộng */
+        .superheroes li:hover {
+            width: 225px; /* Tăng chiều rộng khi di chuột vào */
+        }
+        .superheroes li:hover a {
+            display: block;
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <div class="container">
+
+    <!-- ==================== BÀI 8A: HEROES OF JAVASCRIPT AND HTML ==================== -->
+    <div class="heroes-wrapper">
         <header>
             <h1>Heroes of JavaScript and HTML</h1>
         </header>
-        <div class="main-desc">
-            <strong>Heroes of JavaScript and HTML</strong> is a "Heroes of Might and Magic"-like game, but for code nerds.<br>
-            Each hero has its unique coding abilities and based on them he can develop software applications.
+
+        <div class="main-description">
+            <strong>Heroes of JavaScript and HTML</strong> is a "Heroes of Might and Magic"-like game, but for code nerds. Each hero has its unique coding abilities and based on them he can develop software applications.
         </div>
+
         <p class="sub-title">Currently the game has only four hero types:</p>
+
         <div class="heroes-list">
+            <!-- Hero 1: Front-end Developer -->
             <div class="hero-item">
                 <h2>Front-end Developer</h2>
-                <p class="desc">Being the ultra masters of JavaScript, the order of the <strong>Front-enders</strong> is known to create user interfaces, that fill the users with absolute pleasure.</p>
-                <img src="https://cdn-icons-png.flaticon.com/512/1055/1055666.png" alt="Front-end">
+                <div class="hero-desc">
+                    Being the ultra masters of JavaScript, the order of the <strong>Front-enders</strong> is known to create user interfaces, that fill the users with absolute pleasure.
+                </div>
+                <!-- THAY LINK ẢNH HERO 1 TẠI ĐÂY NẾU MUỐN -->
+                <img src="https://images.unsplash.com/photo-1534972195531-d756b9bfa9f2?w=400&h=300&fit=crop" alt="Front-end Developer">
             </div>
+
+            <!-- Hero 2: Mobile Developer -->
             <div class="hero-item">
                 <h2>Mobile Developer</h2>
-                <p class="desc">The movement of the <strong>Mobile developers</strong> is brand new, yet in their short time they already manage to amaze the peoples of the worlds and beyond with create applications.</p>
-                <img src="https://cdn-icons-png.flaticon.com/512/2586/2586488.png" alt="Mobile">
+                <div class="hero-desc">
+                    The movement of the <strong>Mobile developers</strong> is brand new, yet in their short time they already manage to amaze the peoples of the worlds and beyond with create applications.
+                </div>
+                <!-- THAY LINK ẢNH HERO 2 TẠI ĐÂY NẾU MUỐN -->
+                <img src="https://images.unsplash.com/photo-1526498460520-4c246339dccb?w=400&h=300&fit=crop" alt="Mobile Developer">
             </div>
+
+            <!-- Hero 3: Web Developer -->
             <div class="hero-item">
                 <h2>Web Developer</h2>
-                <p class="desc">The sect of the <strong>Web developers</strong> is the oldest there is. They prefer the old ways and rarely move to modern stuff. The Old Religion gives them power of small gods.</p>
-                <img src="https://cdn-icons-png.flaticon.com/512/1995/1995515.png" alt="Web">
+                <div class="hero-desc">
+                    The sect of the <strong>Web developers</strong> is the oldest there is. They prefer the old ways and rarely move to modern stuff. The Old Religion gives them power of small gods.
+                </div>
+                <!-- THAY LINK ẢNH HERO 3 TẠI ĐÂY NẾU MUỐN -->
+                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=300&fit=crop" alt="Web Developer">
             </div>
+
+            <!-- Hero 4: QA Engineer -->
             <div class="hero-item">
                 <h2>QA Engineer</h2>
-                <p class="desc">The <strong>QAs</strong> are the desiders of fates! They always have the final word, and all gods and mortals are bound to obey them.</p>
-                <img src="https://cdn-icons-png.flaticon.com/512/4305/4305432.png" alt="QA">
+                <div class="hero-desc">
+                    The <strong>QAs</strong> are the desiders of fates! They always have the final word, and all gods and mortals are bound to obey them.
+                </div>
+                <!-- THAY LINK ẢNH HERO 4 TẠI ĐÂY NẾU MUỐN -->
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop" alt="QA Engineer">
             </div>
         </div>
     </div>
+
+    <h3 class="section-separator">--- CÂU 8B: THE BAT FAMILY (Di chuột vào từng nhân vật để xem hiệu ứng mở rộng & Read more) ---</h3>
+
+    <!-- ==================== BÀI 8B: THE BAT FAMILY ==================== -->
+    <div class="bat-wrapper">
+        <div class="site-header">The Bat family</div>
+        <ul class="superheroes">
+            <li>
+                <strong>Batman</strong>
+                <!-- THAY LINK ẢNH BATMAN TẠI ĐÂY -->
+                <img src="https://images.unsplash.com/photo-1509347528160-9a9e33742cdb?w=400&h=500&fit=crop" alt="Batman">
+                <a href="#">Read more</a>
+            </li>
+            <li>
+                <strong>Batwing</strong>
+                <!-- THAY LINK ẢNH BATWING TẠI ĐÂY -->
+                <img src="https://images.unsplash.com/photo-1531259683007-016a7b628fc3?w=400&h=500&fit=crop" alt="Batwing">
+                <a href="#">Read more</a>
+            </li>
+            <li>
+                <strong>Batgirl</strong>
+                <!-- THAY LINK ẢNH BATGIRL TẠI ĐÂY -->
+                <img src="https://images.unsplash.com/photo-1608889175123-8ee362201f81?w=400&h=500&fit=crop" alt="Batgirl">
+                <a href="#">Read more</a>
+            </li>
+            <li>
+                <strong>Nightwing</strong>
+                <!-- THAY LINK ẢNH NIGHTWING TẠI ĐÂY -->
+                <img src="https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe?w=400&h=500&fit=crop" alt="Nightwing">
+                <a href="#">Read more</a>
+            </li>
+            <li>
+                <strong>Red Robin</strong>
+                <!-- THAY LINK ẢNH RED ROBIN TẠI ĐÂY -->
+                <img src="https://images.unsplash.com/photo-1569003339405-ea396a5a8a90?w=400&h=500&fit=crop" alt="Red Robin">
+                <a href="#">Read more</a>
+            </li>
+        </ul>
+    </div>
+
 </body>
 </html>

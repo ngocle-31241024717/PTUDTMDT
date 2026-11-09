@@ -4,126 +4,191 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trang chủ Bài Tập Tuần 3 - Lê Bảo Ngọc</title>
-    <!-- Nhúng thư viện Font Awesome theo yêu cầu Câu 9 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Nhúng thư viện Font Awesome theo đúng yêu cầu Câu 9 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #e0eafc, #cfdef3);
-            margin: 0;
-            padding: 40px 20px;
+            background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
             color: #333;
+            padding: 40px 20px;
+            min-height: 100vh;
         }
-        .card {
-            max-width: 750px;
+        .container {
+            max-width: 850px;
             margin: 0 auto;
-            background: #fff;
+            background: #ffffff;
             border-radius: 16px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0, 95, 105, 0.12);
             padding: 35px;
-        }
-        .profile {
             text-align: center;
-            border-bottom: 2px dashed #e0e0e0;
-            padding-bottom: 25px;
-            margin-bottom: 25px;
         }
-        .profile img {
-            width: 110px;
-            height: 110px;
+        .school-logo {
+            height: 55px;
+            margin-bottom: 15px;
+            object-fit: contain;
+        }
+        .avatar-wrapper {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 15px;
             border-radius: 50%;
-            border: 4px solid #005f69;
-            object-fit: cover;
+            padding: 4px;
+            background: linear-gradient(45deg, #005f69, #f37021);
         }
-        .profile h1 {
-            margin: 12px 0 5px;
+        .avatar-wrapper img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            background: #fff;
+        }
+        h1 {
             color: #005f69;
             font-size: 26px;
+            margin-bottom: 8px;
         }
-        .profile p {
-            margin: 5px 0;
+        .info {
             color: #555;
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 20px;
         }
         .social-links {
-            margin-top: 15px;
+            margin-bottom: 30px;
         }
         .social-links a {
             display: inline-block;
-            margin: 0 8px;
+            text-decoration: none;
             color: #fff;
             background-color: #005f69;
-            padding: 8px 16px;
-            border-radius: 20px;
-            text-decoration: none;
+            padding: 8px 18px;
+            border-radius: 25px;
+            margin: 0 6px;
             font-size: 14px;
-            transition: 0.3s;
+            font-weight: 500;
+            transition: all 0.3s ease;
         }
         .social-links a:hover {
-            background-color: #f36f21;
-        }
-        h2 {
-            color: #005f69;
-            font-size: 20px;
-            margin-bottom: 15px;
-        }
-        .exercise-list {
-            list-style: none;
-            padding: 0;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-        }
-        .exercise-list li a {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding: 14px 18px;
-            background: #f8f9fa;
-            border: 1px solid #dee2e6;
-            border-radius: 8px;
-            text-decoration: none;
-            color: #212529;
-            font-weight: 600;
-            transition: all 0.2s;
-        }
-        .exercise-list li a i {
-            color: #f36f21;
-            font-size: 18px;
-        }
-        .exercise-list li a:hover {
-            background: #005f69;
-            color: #fff;
+            background-color: #f37021;
             transform: translateY(-2px);
         }
-        .exercise-list li a:hover i {
+        .divider {
+            height: 1px;
+            background: #eaeaea;
+            margin: 25px 0;
+        }
+        .section-title {
+            text-align: left;
+            color: #005f69;
+            font-size: 20px;
+            margin-bottom: 18px;
+            border-left: 4px solid #f37021;
+            padding-left: 12px;
+        }
+        .exercise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 15px;
+            text-align: left;
+        }
+        .exercise-card {
+            display: block;
+            text-decoration: none;
+            background: #f8fafd;
+            border: 1px solid #e1e8f0;
+            padding: 16px;
+            border-radius: 10px;
+            color: #2c3e50;
+            transition: all 0.25s ease;
+        }
+        .exercise-card:hover {
+            background: #005f69;
             color: #fff;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 95, 105, 0.2);
+        }
+        .exercise-card i {
+            color: #f37021;
+            margin-right: 8px;
+            font-size: 18px;
+        }
+        .exercise-card:hover i {
+            color: #ffd166;
+        }
+        .exercise-card strong {
+            display: block;
+            font-size: 16px;
+            margin-bottom: 4px;
+        }
+        .exercise-card span {
+            font-size: 13px;
+            opacity: 0.85;
         }
     </style>
 </head>
 <body>
-    <div class="card">
-        <div class="profile">
-            <img src="https://bit.ueh.edu.vn/wp-content/uploads/2017/06/BIT_logo.png" alt="Avatar">
-            <h1><i class="fa-solid fa-user-graduate"></i> Lê Bảo Ngọc</h1>
-            <p><i class="fa-solid fa-id-card"></i> MSSV: 31241024717 | Ngành: Thương mại điện tử</p>
-            <p><i class="fa-solid fa-building-columns"></i> Đại học Kinh tế TP. Hồ Chí Minh (UEH)</p>
-            <div class="social-links">
-                <a href="https://github.com/ngocle-31241024717/PTUDTMDT" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
-                <a href="mailto:ngocle.31241024717@st.ueh.edu.vn"><i class="fa-solid fa-envelope"></i> Email</a>
-                <a href="#"><i class="fa-brands fa-facebook"></i> Facebook</a>
-            </div>
+    <div class="container">
+       
+        <img class="school-logo" src="https://ueh.edu.vn/schools/college/images/logo/bit-header-logo.png" alt="Logo BIT UEH">
+
+        
+        <div class="avatar-wrapper">
+            <img src="https://i.pinimg.com/1200x/f6/22/5f/f6225fd0569dfa4da017f531a1732ba7.jpg" alt="Avatar Lê Bảo Ngọc">
         </div>
 
-        <h2><i class="fa-solid fa-folder-open"></i> Danh sách Bài Tập CSS (Tuần 3 - Về Nhà)</h2>
-        <ul class="exercise-list">
-            <li><a href="BaiTap1.html"><i class="fa-solid fa-code"></i> Bài Tập 1: Nhúng CSS</a></li>
-            <li><a href="BaiTap2.html"><i class="fa-solid fa-palette"></i> Bài Tập 2: Text & Background</a></li>
-            <li><a href="BaiTap4.html"><i class="fa-solid fa-bars"></i> Bài Tập 4: Menu Inline-block</a></li>
-            <li><a href="BaiTap5.html"><i class="fa-solid fa-server"></i> Bài Tập 5: Shared Hosting</a></li>
-            <li><a href="BaiTap6.html"><i class="fa-solid fa-images"></i> Bài Tập 6: My Portfolio</a></li>
-            <li><a href="BaiTap7.html"><i class="fa-solid fa-table-columns"></i> Bài Tập 7: Bố cục Layout</a></li>
-            <li><a href="BaiTap8.html"><i class="fa-solid fa-shield-halved"></i> Bài Tập 8: Heroes of JS & HTML</a></li>
-        </ul>
+        <h1><i class="fa-solid fa-user-graduate"></i> Lê Bảo Ngọc</h1>
+        <div class="info">
+            <p><i class="fa-solid fa-id-card"></i> MSSV: 31241024717 | Ngành: Thương mại điện tử</p>
+            <p><i class="fa-solid fa-building-columns"></i> Đại học Kinh tế TP. Hồ Chí Minh (UEH)</p>
+        </div>
+
+        <!-- 3. SOCIAL LINKS (Có icon Font Awesome theo yêu cầu Câu 9) -->
+        <div class="social-links">
+            <a href="https://github.com/ngocle-31241024717/PTUDTMDT" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+            <a href="mailto:ngocle.31241024717@st.ueh.edu.vn"><i class="fa-solid fa-envelope"></i> Email</a>
+            <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i> Facebook</a>
+        </div>
+
+        <div class="divider"></div>
+
+        <h2 class="section-title"><i class="fa-solid fa-folder-open"></i> Danh sách Bài Tập CSS (Tuần 3 - Về Nhà)</h2>
+        
+        <div class="exercise-grid">
+            <a href="BaiTap1.html" class="exercise-card">
+                <strong><i class="fa-solid fa-palette"></i> Bài Tập 1 (Câu 2a-2d)</strong>
+                <span>Định dạng văn bản, viền, nền cố định</span>
+            </a>
+            <a href="BaiTap2.html" class="exercise-card">
+                <strong><i class="fa-solid fa-text-slash"></i> Bài Tập 2 (Câu 2e)</strong>
+                <span>Xử lý tràn văn bản (Text Overflow)</span>
+            </a>
+            <a href="BaiTap4.html" class="exercise-card">
+                <strong><i class="fa-solid fa-bars"></i> Bài Tập 4 (Câu 4)</strong>
+                <span>Menu ngang với display: inline-block</span>
+            </a>
+            <a href="BaiTap5.html" class="exercise-card">
+                <strong><i class="fa-solid fa-server"></i> Bài Tập 5 (Câu 5)</strong>
+                <span>Landing Page Best Shared Hosting</span>
+            </a>
+            <a href="BaiTap6.html" class="exercise-card">
+                <strong><i class="fa-solid fa-images"></i> Bài Tập 6 (Câu 6)</strong>
+                <span>Giao diện lưới ảnh My Portfolio</span>
+            </a>
+            <a href="BaiTap7.html" class="exercise-card">
+                <strong><i class="fa-solid fa-table-columns"></i> Bài Tập 7 (Câu 7)</strong>
+                <span>Bố cục trang (Wrapper, Nav, Main)</span>
+            </a>
+            <a href="Baitap8.html" class="exercise-card">
+                <strong><i class="fa-solid fa-mask"></i> Bài Tập 8 (Câu 8a & 8b)</strong>
+                <span>Heroes of JS/HTML & The Bat Family</span>
+            </a>
+        </div>
     </div>
 </body>
 </html>

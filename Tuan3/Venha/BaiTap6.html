@@ -2,38 +2,45 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Học web chuẩn - Bài Tập 6</title>
+    <title>MY PORTFOLIO - Câu 6</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #fafafa;
+        * {
             margin: 0;
-            padding: 20px;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
         }
         .portfolio {
             max-width: 1120px;
-            margin: 0 auto;
+            margin: 40px auto;
+            padding: 0 15px;
             text-align: center;
         }
         .portfolio h2 {
             font-size: 28px;
-            color: #333;
-            margin-bottom: 10px;
+            font-weight: bold;
+            margin-bottom: 30px;
             position: relative;
             padding-bottom: 15px;
         }
+        /* Gạch chân màu xanh ngọc dưới chữ MY PORTFOLIO theo đúng gợi ý :after của đề */
         .portfolio h2::after {
             content: "";
-            display: block;
+            position: absolute;
             width: 70px;
             height: 3px;
-            background-color: #3cb878;
-            margin: 12px auto 0;
+            background-color: #20c997;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
         }
         .list-tab {
             list-style: none;
-            padding: 0;
-            margin: 25px 0 35px;
+            margin-bottom: 35px;
         }
         .list-tab li {
             display: inline-block;
@@ -42,29 +49,36 @@
         .list-tab li a {
             text-decoration: none;
             color: #444;
+            font-size: 16px;
             font-weight: bold;
-            font-size: 15px;
+            transition: color 0.3s;
         }
         .list-tab li:first-child a,
         .list-tab li a:hover {
-            color: #3cb878;
+            color: #20c997;
         }
         .galerry {
             list-style: none;
-            padding: 0;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 20px;
+            font-size: 0; /* Khử khoảng trắng giữa các thẻ inline-block */
         }
         .galerry li {
-            width: calc(33.333% - 14px);
-            box-sizing: border-box;
+            display: inline-block;
+            width: 31.33%;
+            margin: 0 1% 20px 1%;
+            background: #fff;
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
         }
         .galerry li img {
             width: 100%;
-            height: auto;
+            height: 240px;
+            object-fit: cover;
             display: block;
+            transition: transform 0.3s ease;
+        }
+        .galerry li a:hover img {
+            transform: scale(1.05);
         }
     </style>
 </head>
@@ -80,16 +94,36 @@
             <li><a href="./">Branding</a></li>
             <li><a href="./">Marketing</a></li>
         </ul>
+
+        <!-- DANH SÁCH 9 ẢNH PORTFOLIO (Kích thước chuẩn tỉ lệ 350x260) -->
+        
         <ul class="galerry">
-            <li><a href="./"><img src="https://hocwebchuan.com/exercises/images/img_350x260.png" alt=""></a></li>
-            <li><a href="./"><img src="https://hocwebchuan.com/exercises/images/img_350x260.png" alt=""></a></li>
-            <li><a href="./"><img src="https://hocwebchuan.com/exercises/images/img_350x260.png" alt=""></a></li>
-            <li><a href="./"><img src="https://hocwebchuan.com/exercises/images/img_350x260.png" alt=""></a></li>
-            <li><a href="./"><img src="https://hocwebchuan.com/exercises/images/img_350x260.png" alt=""></a></li>
-            <li><a href="./"><img src="https://hocwebchuan.com/exercises/images/img_350x260.png" alt=""></a></li>
-            <li><a href="./"><img src="https://hocwebchuan.com/exercises/images/img_350x260.png" alt=""></a></li>
-            <li><a href="./"><img src="https://hocwebchuan.com/exercises/images/img_350x260.png" alt=""></a></li>
-            <li><a href="./"><img src="https://hocwebchuan.com/exercises/images/img_350x260.png" alt=""></a></li>
+            <!-- Ảnh 1: Chủ đề Web App -->
+            <li><a href="./"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=370&fit=crop" alt="Web App 1"></a></li>
+            
+            <!-- Ảnh 2: Chủ đề UI/UX Design -->
+            <li><a href="./"><img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=500&h=370&fit=crop" alt="UI/UX 2"></a></li>
+            
+            <!-- Ảnh 3: Chủ đề Mobile App -->
+            <li><a href="./"><img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=500&h=370&fit=crop" alt="Mobile App 3"></a></li>
+            
+            <!-- Ảnh 4: Chủ đề Graphics Design -->
+            <li><a href="./"><img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?w=500&h=370&fit=crop" alt="Graphics Design 4"></a></li>
+            
+            <!-- Ảnh 5: Chủ đề Branding -->
+            <li><a href="./"><img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=500&h=370&fit=crop" alt="Branding 5"></a></li>
+            
+            <!-- Ảnh 6: Chủ đề Digital Marketing -->
+            <li><a href="./"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=370&fit=crop" alt="Marketing 6"></a></li>
+            
+            <!-- Ảnh 7: Chủ đề Workspace / Coding -->
+            <li><a href="./"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500&h=370&fit=crop" alt="Web App 7"></a></li>
+            
+            <!-- Ảnh 8: Chủ đề E-commerce UI -->
+            <li><a href="./"><img src="https://images.unsplash.com/photo-1555421689-491a97ff2040?w=500&h=370&fit=crop" alt="UI/UX 8"></a></li>
+            
+            <!-- Ảnh 9: Chủ đề Creative Layout -->
+            <li><a href="./"><img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=500&h=370&fit=crop" alt="Branding 9"></a></li>
         </ul>
     </section>
 </body>

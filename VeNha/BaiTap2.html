@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập CSS - Câu 2</title>
+
+    <style>
+        /* a. Đại học UEH */
+        .ueh {
+            color: blue;
+            text-align: center;
+            font-weight: bold;
+            text-decoration: underline;
+            font-size: 30px;
+        }
+
+        /* b. Khoa CNTTD */
+        .cnttd {
+            color: red;
+            text-align: right;
+            font-style: italic;
+            border: 2px dotted yellow;
+            border-radius: 10px;
+            background-color: gray;
+            font-size: 15px;
+            opacity: 0.5;
+            padding: 10px;
+        }
+
+        /* c. Định dạng chữ BIT-UEH */
+        .bit-ueh {
+            text-align: center;
+            font-size: 40px;
+            font-weight: bold;
+            color: #d92727;
+            text-shadow:
+                2px 2px 3px yellow,
+                0 0 8px yellow,
+                0 0 15px orange;
+        }
+
+        /* d. Logo BIT làm hình nền */
+        body {
+            background-image: url("https://bit.ueh.edu.vn/wp-content/uploads/2017/06/BIT_logo.png");
+            background-size: 30px auto;
+            background-repeat: repeat;
+            background-attachment: fixed;
+        }
+
+        .content {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 15px;
+            margin: 20px;
+        }
+
+        /* e.i. Rộng 100px, cao 50px, ẩn nội dung tràn */
+        .overflow-hidden {
+            width: 100px;
+            height: 50px;
+            overflow: hidden;
+            background-color: lightblue;
+            margin-bottom: 15px;
+        }
+
+        /* e.ii. Cắt nội dung tràn bằng dấu ... */
+        .overflow-ellipsis {
+            width: 100px;
+            height: 50px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            background-color: lightgreen;
+            margin-bottom: 15px;
+        }
+
+        /* e.iii. Không xuống dòng */
+        .nowrap {
+            width: 100px;
+            white-space: nowrap;
+            background-color: lightpink;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="content">
+
+        <h2>Câu 2. Thực hành CSS</h2>
+
+        <!-- a -->
+        <p class="ueh">Đại học UEH</p>
+
+        <!-- b -->
+        <p class="cnttd">Khoa CNTTD</p>
+
+        <!-- c -->
+        <h1 class="bit-ueh">BIT-UEH</h1>
+
+        <!-- e -->
+        <h3>e.i. Overflow Hidden</h3>
+        <div class="overflow-hidden">
+            Nhu cầu xã hội Ngành Thương mại điện tử (TMĐT) tại Việt Nam hiện nay đang có những bước tăng trưởng mạnh mẽ.
+        </div>
+
+        <h3>e.ii. Text Overflow Ellipsis</h3>
+        <div class="overflow-ellipsis">
+            Nhu cầu xã hội Ngành Thương mại điện tử (TMĐT) tại Việt Nam hiện nay đang có những bước tăng trưởng mạnh mẽ.
+        </div>
+
+        <h3>e.iii. White Space Nowrap</h3>
+        <div class="nowrap">
+            Nhu cầu xã hội Ngành Thương mại điện tử (TMĐT) tại Việt Nam hiện nay.
+        </div>
+
+    </div>
+
+</body>
+</html>

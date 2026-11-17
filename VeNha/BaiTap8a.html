@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>The Bat Family</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<style>
+    body { font-family: Arial, sans-serif; background-color: #fff; }
+    .container { width: 1024px; margin: 0 auto; text-align: center; }
+    .site-header { text-align: center; margin: 20px 0; background: #333; color: white; text-shadow: 2px 2px 4px #000; padding: 10px; }
+    ul.superheroes { list-style: none; padding: 0; margin: 0; font-size: 0; }
+    ul.superheroes li { width: 20%; display: inline-block; position: relative; font-size: 16px; transition: width 0.3s ease; overflow: hidden; vertical-align: top; }
+    ul.superheroes li img { max-width: 100%; border: 2px solid #fff; border-radius: 10px; display: block; }
+    ul.superheroes li a {
+        display: none; width: 100%; color: white; text-decoration: none; position: absolute;
+        bottom: 20px; left: 0; text-align: center; font-weight: bold; background: rgba(0,0,0,0.6); padding: 10px 0;
+    }
+    ul.superheroes li a i { margin-right: 8px; }
+    ul.superheroes li:hover { width: 25%; z-index: 10; }
+    ul.superheroes li:hover a { display: block; }
+    ul.superheroes li a:hover { text-decoration: underline; color: #ffeb3b; }
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="site-header"><i class="fab fa-batman"></i> The Bat family</h1>
+        <ul class="superheroes">
+            <li>
+                <img src="https://via.placeholder.com/300x400/111/fff?text=Batman" alt="Batman">
+                <a href="#"><i class="fas fa-book-open"></i>Read more</a>
+            </li>
+            <li>
+                <img src="https://via.placeholder.com/300x400/333/fff?text=Batwing" alt="Batwing">
+                <a href="#"><i class="fas fa-book-open"></i>Read more</a>
+            </li>
+            <li>
+                <img src="https://via.placeholder.com/300x400/555/fff?text=Batgirl" alt="Batgirl">
+                <a href="#"><i class="fas fa-book-open"></i>Read more</a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

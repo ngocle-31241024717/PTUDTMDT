@@ -1,0 +1,12 @@
+[
+  { "id": 1, "name": "Amsterdam", "country": "Netherlands" },
+  { "id": 2, "name": "Athens", "country": "Greece" },
+  { "id": 3, "name": "Berlin", "country": "Germany" },
+  { "id": 4, "name": "Florence", "country": "Italy" },
+  { "id": 5, "name": "London", "country": "United Kingdom" },
+  { "id": 6, "name": "Madrid", "country": "Spain" },
+  { "id": 7, "name": "Paris", "country": "France" },
+  { "id": 8, "name": "Rome", "country": "Italy" },
+  { "id": 9, "name": "Toronto", "country": "Canada" },
+  { "id": 10, "name": "Vancouver", "country": "Canada" }
+]

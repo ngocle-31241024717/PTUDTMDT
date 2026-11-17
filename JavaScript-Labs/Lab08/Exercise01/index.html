@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercise 8.1 - Enabling/Disabling JavaScript</title>
+</head>
+<body>
+  <h1>JavaScript Test</h1>
+  <p id="message" style="color:red;">You have JavaScript disabled</p>
+
+  <noscript>
+    <p style="color:red;">You have JavaScript disabled</p>
+  </noscript>
+
+  <script>
+    var m = document.getElementById("message");
+    m.textContent = "You have JavaScript enabled";
+    m.style.color = "green";
+  </script>
+</body>
+</html>
